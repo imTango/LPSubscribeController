@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04CC78B81CF6D892008B2874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78B71CF6D892008B2874 /* AppDelegate.swift */; };
+		04CC78BF1CF6D892008B2874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC78BE1CF6D892008B2874 /* Assets.xcassets */; };
+		04CC78C21CF6D892008B2874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC78C01CF6D892008B2874 /* LaunchScreen.storyboard */; };
+		04CC78CB1CF6D8F1008B2874 /* LPSubscriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78CA1CF6D8F1008B2874 /* LPSubscriptionController.swift */; };
+		04CC78CD1CF6E30F008B2874 /* SubscriptionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78CC1CF6E30F008B2874 /* SubscriptionViewLayout.swift */; };
+		04CC78CF1CF7EA99008B2874 /* SubscriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78CE1CF7EA99008B2874 /* SubscriptionHeader.swift */; };
+		04CC78D11CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78D01CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04CC78B41CF6D892008B2874 /* LPSubscriptionControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPSubscriptionControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CC78B71CF6D892008B2874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04CC78BE1CF6D892008B2874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CC78C11CF6D892008B2874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04CC78C31CF6D892008B2874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CC78CA1CF6D8F1008B2874 /* LPSubscriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPSubscriptionController.swift; sourceTree = "<group>"; };
+		04CC78CC1CF6E30F008B2874 /* SubscriptionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionViewLayout.swift; sourceTree = "<group>"; };
+		04CC78CE1CF7EA99008B2874 /* SubscriptionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionHeader.swift; sourceTree = "<group>"; };
+		04CC78D01CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04CC78B11CF6D892008B2874 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04CC78AB1CF6D892008B2874 = {
+			isa = PBXGroup;
+			children = (
+				04CC78B61CF6D892008B2874 /* LPSubscriptionControllerSample */,
+				04CC78B51CF6D892008B2874 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04CC78B51CF6D892008B2874 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04CC78B41CF6D892008B2874 /* LPSubscriptionControllerSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04CC78B61CF6D892008B2874 /* LPSubscriptionControllerSample */ = {
+			isa = PBXGroup;
+			children = (
+				04CC78B71CF6D892008B2874 /* AppDelegate.swift */,
+				04CC78CA1CF6D8F1008B2874 /* LPSubscriptionController.swift */,
+				04CC78C91CF6D8B3008B2874 /* Supporting Files */,
+				04CC78CC1CF6E30F008B2874 /* SubscriptionViewLayout.swift */,
+				04CC78CE1CF7EA99008B2874 /* SubscriptionHeader.swift */,
+				04CC78D01CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift */,
+			);
+			path = LPSubscriptionControllerSample;
+			sourceTree = "<group>";
+		};
+		04CC78C91CF6D8B3008B2874 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04CC78BE1CF6D892008B2874 /* Assets.xcassets */,
+				04CC78C01CF6D892008B2874 /* LaunchScreen.storyboard */,
+				04CC78C31CF6D892008B2874 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04CC78B31CF6D892008B2874 /* LPSubscriptionControllerSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CC78C61CF6D892008B2874 /* Build configuration list for PBXNativeTarget "LPSubscriptionControllerSample" */;
+			buildPhases = (
+				04CC78B01CF6D892008B2874 /* Sources */,
+				04CC78B11CF6D892008B2874 /* Frameworks */,
+				04CC78B21CF6D892008B2874 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LPSubscriptionControllerSample;
+			productName = LPSubscriptionControllerSample;
+			productReference = 04CC78B41CF6D892008B2874 /* LPSubscriptionControllerSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04CC78AC1CF6D892008B2874 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "litt1e-p";
+				TargetAttributes = {
+					04CC78B31CF6D892008B2874 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 04CC78AF1CF6D892008B2874 /* Build configuration list for PBXProject "LPSubscriptionControllerSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04CC78AB1CF6D892008B2874;
+			productRefGroup = 04CC78B51CF6D892008B2874 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04CC78B31CF6D892008B2874 /* LPSubscriptionControllerSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04CC78B21CF6D892008B2874 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CC78C21CF6D892008B2874 /* LaunchScreen.storyboard in Resources */,
+				04CC78BF1CF6D892008B2874 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04CC78B01CF6D892008B2874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CC78CB1CF6D8F1008B2874 /* LPSubscriptionController.swift in Sources */,
+				04CC78B81CF6D892008B2874 /* AppDelegate.swift in Sources */,
+				04CC78D11CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift in Sources */,
+				04CC78CF1CF7EA99008B2874 /* SubscriptionHeader.swift in Sources */,
+				04CC78CD1CF6E30F008B2874 /* SubscriptionViewLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04CC78C01CF6D892008B2874 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04CC78C11CF6D892008B2874 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04CC78C41CF6D892008B2874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04CC78C51CF6D892008B2874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04CC78C71CF6D892008B2874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LPSubscriptionControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litt1e-p.LPSubscriptionControllerSample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04CC78C81CF6D892008B2874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LPSubscriptionControllerSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.litt1e-p.LPSubscriptionControllerSample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04CC78AF1CF6D892008B2874 /* Build configuration list for PBXProject "LPSubscriptionControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CC78C41CF6D892008B2874 /* Debug */,
+				04CC78C51CF6D892008B2874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CC78C61CF6D892008B2874 /* Build configuration list for PBXNativeTarget "LPSubscriptionControllerSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CC78C71CF6D892008B2874 /* Debug */,
+				04CC78C81CF6D892008B2874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04CC78AC1CF6D892008B2874 /* Project object */;
+}
