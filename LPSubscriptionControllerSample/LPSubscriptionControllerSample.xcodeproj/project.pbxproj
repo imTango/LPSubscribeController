@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C5858F1D33502100CF87FC /* LPSubscribeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5858E1D33502100CF87FC /* LPSubscribeCell.swift */; };
+		04C585911D33535A00CF87FC /* LPSubscribeMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C585901D33535A00CF87FC /* LPSubscribeMacro.swift */; };
+		04C585931D33765300CF87FC /* LPSubscribeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C585921D33765300CF87FC /* LPSubscribeHeader.swift */; };
+		04C585DC1D388AD000CF87FC /* LPSubscribeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C585DB1D388AD000CF87FC /* LPSubscribeController.swift */; };
 		04CC78B81CF6D892008B2874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC78B71CF6D892008B2874 /* AppDelegate.swift */; };
 		04CC78BF1CF6D892008B2874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC78BE1CF6D892008B2874 /* Assets.xcassets */; };
 		04CC78C21CF6D892008B2874 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC78C01CF6D892008B2874 /* LaunchScreen.storyboard */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C5858E1D33502100CF87FC /* LPSubscribeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPSubscribeCell.swift; sourceTree = "<group>"; };
+		04C585901D33535A00CF87FC /* LPSubscribeMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPSubscribeMacro.swift; sourceTree = "<group>"; };
+		04C585921D33765300CF87FC /* LPSubscribeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPSubscribeHeader.swift; sourceTree = "<group>"; };
+		04C585DB1D388AD000CF87FC /* LPSubscribeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPSubscribeController.swift; sourceTree = "<group>"; };
 		04CC78B41CF6D892008B2874 /* LPSubscriptionControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPSubscriptionControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC78B71CF6D892008B2874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CC78BE1CF6D892008B2874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04C5858D1D334FAE00CF87FC /* LPSubscriptionController */ = {
+			isa = PBXGroup;
+			children = (
+				04CC78CA1CF6D8F1008B2874 /* LPSubscriptionController.swift */,
+				04C5858E1D33502100CF87FC /* LPSubscribeCell.swift */,
+				04C585901D33535A00CF87FC /* LPSubscribeMacro.swift */,
+				04C585921D33765300CF87FC /* LPSubscribeHeader.swift */,
+				04C585DB1D388AD000CF87FC /* LPSubscribeController.swift */,
+			);
+			name = LPSubscriptionController;
+			sourceTree = "<group>";
+		};
 		04CC78AB1CF6D892008B2874 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +78,8 @@
 		04CC78B61CF6D892008B2874 /* LPSubscriptionControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				04C5858D1D334FAE00CF87FC /* LPSubscriptionController */,
 				04CC78B71CF6D892008B2874 /* AppDelegate.swift */,
-				04CC78CA1CF6D8F1008B2874 /* LPSubscriptionController.swift */,
 				04CC78C91CF6D8B3008B2874 /* Supporting Files */,
 				04CC78CC1CF6E30F008B2874 /* SubscriptionViewLayout.swift */,
 				04CC78CE1CF7EA99008B2874 /* SubscriptionHeader.swift */,
@@ -148,9 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C5858F1D33502100CF87FC /* LPSubscribeCell.swift in Sources */,
+				04C585931D33765300CF87FC /* LPSubscribeHeader.swift in Sources */,
 				04CC78CB1CF6D8F1008B2874 /* LPSubscriptionController.swift in Sources */,
 				04CC78B81CF6D892008B2874 /* AppDelegate.swift in Sources */,
+				04C585DC1D388AD000CF87FC /* LPSubscribeController.swift in Sources */,
 				04CC78D11CF7F06A008B2874 /* SubscriptionCollectionViewCell.swift in Sources */,
+				04C585911D33535A00CF87FC /* LPSubscribeMacro.swift in Sources */,
 				04CC78CF1CF7EA99008B2874 /* SubscriptionHeader.swift in Sources */,
 				04CC78CD1CF6E30F008B2874 /* SubscriptionViewLayout.swift in Sources */,
 			);
@@ -296,6 +320,7 @@
 				04CC78C81CF6D892008B2874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

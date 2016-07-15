@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LPSubscriptionController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     typealias IsLimitWidth = (yesOrNo: Bool, data: AnyObject)
@@ -55,8 +54,8 @@ class LPSubscriptionController: UIViewController, UICollectionViewDelegate, UICo
         set1.append(set2[indexPath.row])
         set2.removeAtIndex(indexPath.row)
         print(set1, set2)
-//        set1.addObject(set2[indexPath.row])
-//        set2.removeObject(indexPath.row)
+        //        set1.addObject(set2[indexPath.row])
+        //        set2.removeObject(indexPath.row)
         
         dataSource.removeAllObjects()
         dataSource.addObject(set1)
@@ -119,10 +118,10 @@ class LPSubscriptionController: UIViewController, UICollectionViewDelegate, UICo
         let limitWidth = CGRectGetWidth(collectionView.frame) - kCollectionViewToLeftMargin - kCollectionViewToRightMargin
         if cw >= limitWidth {
             cw = limitWidth
-//            isLimitWidth != nil ? IsLimitWidth(true, cw) : nil
+            //            isLimitWidth != nil ? IsLimitWidth(true, cw) : nil
             return cw
         }
-//        IsLimitWidth ? IsLimitWidth(false, cw) : nil
+        //        IsLimitWidth ? IsLimitWidth(false, cw) : nil
         return cw
     }
     
