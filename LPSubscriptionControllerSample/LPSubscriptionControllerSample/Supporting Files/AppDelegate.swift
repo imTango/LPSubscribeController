@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.backgroundColor                = UIColor.whiteColor()
         let ed = ["recommendation", "hotspot", "car", "finance", "society", "film stars", "IT tech", "mobile apps"]
         let un = ["e-commerce", "big data", "stock", "food security", "custom labels"]
-        let rvc = LPSubscriptionController(ed: ed, un: un)
-//        let rvc = LPSubscribeController(selectedArr: ed, optionalArr: un)
+//        let rvc = LPSubscriptionController(ed: ed, un: un)
+        let rvc = LPSubscribeController(selectedArr: ed, optionalArr: un)
 
         window?.rootViewController = UINavigationController(rootViewController: rvc)
         window?.makeKeyAndVisible()
