@@ -16,7 +16,6 @@ class LPSubscribeController: UIViewController
     private var isSort: Bool = false
     private var lastIsHidden: Bool = false
     
-    
     convenience init (selectedArr: [String]?, optionalArr: [String]?) {
         self.init()
         selectedArray = selectedArr
@@ -37,8 +36,8 @@ class LPSubscribeController: UIViewController
         al.textAlignment             = .Center
         al.font                      = UIFont.systemFontOfSize(15.0)
         al.numberOfLines             = 1
-        al.adjustsFontSizeToFitWidth = true
-        al.minimumScaleFactor        = 0.1
+//        al.adjustsFontSizeToFitWidth = true
+//        al.minimumScaleFactor        = 0.1
         al.textColor                 = RGBA(101, 101, 101, 1)
         al.layer.masksToBounds       = true
         al.layer.borderColor         = RGBA(211, 211, 211, 1).CGColor
@@ -47,8 +46,8 @@ class LPSubscribeController: UIViewController
     } ()
     
     private lazy var collectionView: UICollectionView = {
-        let layout              = UICollectionViewFlowLayout()
-        layout.scrollDirection  = .Vertical
+        let layout              = LPSubscribeLayout()
+//        let layout              = LPSubscribeLeftAlignLayout()
         let cv                  = UICollectionView(frame: CGRectMake(0, 0, SCREEN_SIZE.width, SCREEN_SIZE.height - 64), collectionViewLayout: layout)
         cv.backgroundColor      = .whiteColor()
         cv.alwaysBounceVertical = true
@@ -109,6 +108,29 @@ class LPSubscribeController: UIViewController
     }
 }
 
+// MARK: - UICollectionViewItemSizeLayoutDelegate
+
+extension LPSubscribeController: UICollectionViewItemSizeLayoutDelegate
+{
+    typealias IsLimitWidth = ((isLimit: Bool, data: AnyObject)->Void)?
+    
+    private func cellWidth(text: String?) -> CGFloat {
+        var w: CGFloat = 0.0
+        guard text?.characters.count > 0 else {return w}
+        let str = text! as NSString
+        let s   = str.sizeWithAttributes([NSFontAttributeName : UIFont.systemFontOfSize(14.0)])
+        w       = CGFloat(ceilf(Float(s.width))) + 12
+        return min(w, CGRectGetWidth(collectionView.frame))
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        var s = CGSizeZero
+        let text = indexPath.section == 0 ? selectedArray![indexPath.row] : optionalArray![indexPath.row]
+        s   = CGSizeMake(cellWidth(text), 40)
+        return s
+    }
+}
+
 extension LPSubscribeController: LPSubscribeCellDeleteDelegate
 {
     func deleteItem(indexPath: NSIndexPath) {
@@ -127,7 +149,12 @@ extension LPSubscribeController: UICollectionViewDelegate
             let endCell = collectionView.cellForItemAtIndexPath(indexPath) as! LPSubscribeCell
             endCell.contentLabel.hidden = true
             selectedArray?.append(optionalArray![indexPath.item])
-            collectionView.reloadSections(NSIndexSet(index: 0))
+            UIView.animateWithDuration(0, animations: {
+                [weak self] in
+                self!.collectionView.performBatchUpdates({ 
+                    self?.collectionView.reloadSections(NSIndexSet(index: 0))
+                    }, completion: nil)
+            })
             
             let startAttr = collectionView.layoutAttributesForItemAtIndexPath(indexPath)
             animationLabel.frame = (startAttr?.frame)!
@@ -149,37 +176,6 @@ extension LPSubscribeController: UICollectionViewDelegate
                     self!.collectionView.deleteItemsAtIndexPaths([indexPath])
                 })
         }
-    }
-}
-
-extension LPSubscribeController: UICollectionViewDelegateFlowLayout
-{
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake((SCREEN_SIZE.width - (5*SPACE)) / 4.0, 40)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(SPACE, SPACE, SPACE, SPACE)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return SPACE
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return SPACE
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if section == 0 {
-            return CGSizeMake(SCREEN_SIZE.width, 40.0)
-        } else {
-            return CGSizeMake(SCREEN_SIZE.width, 30.0)
-        }
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return  CGSizeMake(SCREEN_SIZE.width, 0.0)
     }
 }
 
@@ -217,7 +213,8 @@ extension LPSubscribeController: UICollectionViewDataSource
             reusableView.buttonHidden = false
             reusableView.clickButton.selected = isSort
             reusableView.backgroundColor = .whiteColor()
-            reusableView.click({[weak self] (state) in
+            reusableView.clickBlock = {
+                [weak self] (state) in
                 if state == .Editing {
                     self!.isSort = true
                 } else {
@@ -235,7 +232,7 @@ extension LPSubscribeController: UICollectionViewDataSource
                     }
                 }
                 self!.collectionView.reloadData()
-                })
+            }
             reusableView.titleLabel.text = kLPSCDidSelectedDesc
         } else {
             reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: kLPSCSectionHeaderTwoIdentifier, forIndexPath: indexPath) as! LPSubscribeHeader

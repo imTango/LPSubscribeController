@@ -17,12 +17,7 @@ typealias ClickBlock = ((state: LPSubscribeBtnState) -> Void)?
 
 class LPSubscribeHeader: UICollectionReusableView
 {
-    internal func click(block: ClickBlock) {
-        if ((block) != nil) {
-            clickBlock = block;
-        }
-    }
-    
+    var clickBlock: ClickBlock
     override init(frame: CGRect) {
         super.init(frame: frame)
         configSubViews()
@@ -30,6 +25,12 @@ class LPSubscribeHeader: UICollectionReusableView
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        titleLabel.frame = CGRectMake(10, 0, 200, self.bounds.size.height)
+        clickButton.frame = CGRectMake(SCREEN_SIZE.width - 180, 10, 160, self.bounds.size.height)
     }
     
     @objc private func clickEvent(btn: UIButton) {
@@ -43,8 +44,8 @@ class LPSubscribeHeader: UICollectionReusableView
     }
     
     internal lazy var titleLabel: UILabel = {
-        let tl = UILabel(frame: CGRectMake(10, 0, 200, self.bounds.size.height))
-        tl.font = UIFont.systemFontOfSize(14.0)
+        let tl = UILabel()
+        tl.font = UIFont.systemFontOfSize(17.0)
         tl.textColor = RGBA(51, 51, 51, 1)
         return tl
     } ()
@@ -58,7 +59,7 @@ class LPSubscribeHeader: UICollectionReusableView
     }
     
     internal lazy var clickButton: UIButton = {
-        let cb = UIButton(frame: CGRectMake(SCREEN_SIZE.width - 80, 10, 60, 20))
+        let cb = UIButton()
         cb.titleLabel?.font = UIFont.systemFontOfSize(13.0)
         cb.backgroundColor = .whiteColor()
         cb.layer.masksToBounds = true
@@ -68,9 +69,8 @@ class LPSubscribeHeader: UICollectionReusableView
         cb.setTitle(kLPSCEditDesc, forState: .Normal)
         cb.setTitle(kLPSCEditCompleteDesc, forState: .Selected)
         cb.setTitleColor(RGBA(214, 39, 48, 1), forState: .Normal)
+        cb.titleLabel?.font = UIFont.systemFontOfSize(17.0)
         cb.addTarget(self, action: #selector(clickEvent(_:)), forControlEvents: .TouchUpInside)
         return cb
     } ()
-    
-    private var clickBlock: ClickBlock
 }

@@ -33,7 +33,7 @@ class LPSubscribeCell: UICollectionViewCell
         } else {
             contentLabel.textColor           = RGBA(101, 101, 101, 1)
             contentLabel.layer.masksToBounds = true
-            contentLabel.layer.cornerRadius  = CGRectGetHeight(contentView.bounds) * 0.5
+            contentLabel.layer.cornerRadius  = CGRectGetHeight(contentView.bounds) * 0.3
             contentLabel.layer.borderColor   = RGBA(211, 211, 211, 1).CGColor
             contentLabel.layer.borderWidth   = 0.45
         }
@@ -58,6 +58,12 @@ class LPSubscribeCell: UICollectionViewCell
         }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentLabel.frame = CGRectMake(0, 0, contentView.bounds.size.width, contentView.bounds.size.height)
+        deleteButton.frame =  CGRectMake(0, 0, contentView.bounds.size.height * 0.3, contentView.bounds.size.height * 0.3)
+    }
+    
     private func confingSubViews() {
         contentView.addSubview(contentLabel)
         contentView.addSubview(deleteButton)
@@ -70,20 +76,16 @@ class LPSubscribeCell: UICollectionViewCell
     }
     
     internal lazy var deleteButton: UIButton = {
-        let db = UIButton(frame: CGRectMake(0, 0, 10, 10))
+        let db = UIButton()
         db.setBackgroundImage(UIImage(named: "delete"), forState: .Normal)
         db.addTarget(self, action: #selector(self.deleteEvent(_:)), forControlEvents: .TouchUpInside)
         return db
     } ()
     
     internal lazy var contentLabel: UILabel = {
-        let cl = UILabel(frame: CGRectMake(0, 0, self.contentView.bounds.size.width , self.contentView.bounds.size.height))
-        cl.center = self.contentView.center;
+        let cl = UILabel()
         cl.textAlignment = .Center
         cl.font = UIFont.systemFontOfSize(15.0)
-        cl.numberOfLines = 1;
-//        cl.adjustsFontSizeToFitWidth = true
-//        cl.minimumScaleFactor = 0.1
         return cl
     } ()
 }

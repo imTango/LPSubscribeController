@@ -17,10 +17,10 @@ let RGBA: (CGFloat, CGFloat, CGFloat, CGFloat) -> UIColor = {
     return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
 }
 
-let kLPSCEditDesc = "排序删除"
-let kLPSCEditCompleteDesc = "完成"
-let kLPSCDidSelectedDesc = "已选栏目"
-let kLPSCAddMoreDesc = "点击添加更多栏目"
+let kLPSCEditDesc = "sort or delete"
+let kLPSCEditCompleteDesc = "done"
+let kLPSCDidSelectedDesc = "selected"
+let kLPSCAddMoreDesc = "add more"
 
 let kLPSCAddAnimationDuration = 0.25
 

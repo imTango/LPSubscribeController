@@ -1,14 +1,14 @@
 //
-//  SubscriptionViewLayout.swift
+//  LPSubscribeLeftAlignLayout.swift
 //  LPSubscriptionControllerSample
 //
-//  Created by litt1e-p on 16/5/26.
+//  Created by paul on 16/7/15.
 //  Copyright © 2016年 litt1e-p. All rights reserved.
 //
 
 import UIKit
 
-class SubscriptionViewLayout: UICollectionViewFlowLayout
+class LPSubscribeLeftAlignLayout: UICollectionViewFlowLayout
 {
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributesRes = NSArray(array: super.layoutAttributesForElementsInRect(rect)!, copyItems: true)
